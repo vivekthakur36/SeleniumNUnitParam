@@ -12,7 +12,7 @@ namespace SeleniumNUnitParam
     {
 
 
-        [ignore ("temp")]
+        /*[Test]
         public void GoogleTest()
         {
             Driver.Navigate().GoToUrl("http://www.google.com");
@@ -22,7 +22,7 @@ namespace SeleniumNUnitParam
             Assert.That(Driver.PageSource.Contains("Selenium"), Is.EqualTo(true),
                                             "The text selenium doest not exist");
 
-        }
+        }*/
 
         [Test]
         public void ExecuteAutomationTest()
