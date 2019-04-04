@@ -12,7 +12,7 @@ namespace SeleniumNUnitParam
     {
 
 
-        [Test]
+        [Ignore("temp")]
         public void GoogleTest()
         {
             Driver.Navigate().GoToUrl("http://www.google.com");
