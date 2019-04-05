@@ -34,7 +34,22 @@ namespace SeleniumNUnitParam
             System.Threading.Thread.Sleep(2000);
             Assert.That(Driver.PageSource.Contains("Selenium"), Is.EqualTo(true),
                                             "The text selenium doest not exist");
+       
+        }
 
+        [Test]
+        public void ExecuteAutomationTest2()
+        {
+            Driver.Navigate().GoToUrl("http://www.executeautomation.com/demosite/index.html");
+            Driver.FindElement(By.Name("Initial")).SendKeys("Eng.");
+            Driver.FindElement(By.Name("FirstName")).SendKeys("Vivek");
+            Driver.FindElement(By.Name("MiddleName")).SendKeys("Kumar");
+            Driver.FindElement(By.Name("Save")).Submit();
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("First Name Is :", Driver.FindElement(By.Name("FirstName")).Text);
+            Assert.That(Driver.FindElement(By.Name("FirstName")).Text, Is.EqualTo("Vivek"),
+                                            "The text selenium doest not exist");
+        
         }
 
 
