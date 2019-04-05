@@ -46,8 +46,8 @@ namespace SeleniumNUnitParam
             Driver.FindElement(By.Name("MiddleName")).SendKeys("Kumar");
             Driver.FindElement(By.Name("Save")).Submit();
             System.Threading.Thread.Sleep(2000);
-            Console.WriteLine("First Name Is :", Driver.FindElement(By.Name("FirstName")).Text);
-            Assert.That(Driver.FindElement(By.Name("FirstName")).Text, Is.EqualTo("Vivek"),
+            Console.WriteLine("First Name Is :", Driver.FindElement(By.Name("FirstName")).GetAttribute("value"));
+            Assert.That(Driver.FindElement(By.Name("FirstName")).GetAttribute("value"), Is.EqualTo("Vivek"),
                                             "The text selenium doest not exist");
         
         }
